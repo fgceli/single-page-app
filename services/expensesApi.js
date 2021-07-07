@@ -18,7 +18,6 @@ const expensesApi = {
   getReports: async () => {
     try {
       // 👇 Replace this with call to API 👇
-      return [
         const token = await window.auth0Client.getTokenSilently();
 const options = {
  method: "GET",
@@ -29,7 +28,7 @@ const options = {
 };
 const res = await fetch(`${window.env.API_URL}/reports`, options);
 const json = await res.json(); return json;
-      ];
+      
       // 👆 Replace this with call to API 👆
     } catch (err) {
       console.log("Error getting reports", err);
