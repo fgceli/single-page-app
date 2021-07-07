@@ -9,7 +9,7 @@ window.user = {
 
 const Navbar = {
   render: async () => {
-    const isAuthenticated = false; // 👈 Replace this with isAuthenticated check
+   const isAuthenticated = await window.auth0Client.isAuthenticated();
     const view = /*html*/ `
     <li class="logo">
       <a href="#">
@@ -23,12 +23,12 @@ const Navbar = {
       <a id="expenses-link" href="#expenses">Expenses</a>
     </li>
     <li class="spacer" />
-    <li id="log-out" style="display: ${isAuthenticated ? "block" : "none"}">
-      <a href="#"> Logout</a>
-    </li>
-    <li id="log-in" style="display: ${isAuthenticated ? "none" : "block"}">
-      <a href="#"> Login</a>
-    </li>
+<li id="log-out" style="display: ${isAuthenticated ? "block" : "none"}">
+<a href="#"> Logout<a>
+<li>
+<li id="log-in" style="display: ${isAuthenticated ? "none" : "block"}">
+<a href="#"> Login<a>
+<li>
     <li class="profile">
       <img src="${window.user.picture}" />
     </li>
@@ -40,11 +40,16 @@ const Navbar = {
     document.getElementById("log-in").addEventListener("click", async (e) => {
       e.preventDefault();
       // 👉 Replace this with login call 👈
+      await window.auth0Client.loginWithRedirect();
+
     });
 
     document.getElementById("log-out").addEventListener("click", (e) => {
       e.preventDefault();
       // 👉 Replace this with logout call 👈
+      window.auth0Client.logout({
+ returnTo: window.env.APP_URL,
+});
     });
   },
 };
