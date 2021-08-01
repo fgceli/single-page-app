@@ -2,7 +2,7 @@ import Error404 from "./views/pages/Error404";
 import Home from "./views/pages/Home";
 import Expenses from "./views/pages/Expenses";
 import Navbar from "./views/components/Navbar";
-import Navbar from "./views/components/extraData";
+import Navbar from "./views/pages/extraData";
 
 const routes = {
   "/": Home,
