@@ -7,7 +7,7 @@ import extraData from "./views/pages/extraData";
 const routes = {
   "/": Home,
   expenses: Expenses,
-  extradata: extraData,
+  extraData: extraData,
 };
 
 const navbar = document.getElementById("navbar");
