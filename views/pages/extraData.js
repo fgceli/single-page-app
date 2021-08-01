@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 }); 
 const extraData = {
-  allowAccess: async () => true,
   render: async () => {
-    const summary = await expensesApi.getTotals();
+
     const view = /*html*/ `
     <h1>Fill in the form</h1>
 
