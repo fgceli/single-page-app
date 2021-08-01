@@ -6,6 +6,7 @@ import Navbar from "./views/components/Navbar";
 const routes = {
   "/": Home,
   expenses: Expenses,
+  extradata: extraData,
 };
 
 const navbar = document.getElementById("navbar");
