@@ -12,7 +12,7 @@ window.auth0Client = await createAuth0Client({
  redirect_uri,
  cacheLocation: "localstorage",
  audience: "https://testwithoutscopes", // 👈 Added
- //scope: "read:reports", // 👈 Added
+ scope: "test:test"//"read:reports", // 👈 Added
 });
 
   // handle user navigation
