@@ -11,8 +11,8 @@ window.auth0Client = await createAuth0Client({
  client_id,
  redirect_uri,
  cacheLocation: "localstorage",
- //audience: "https://expenses-api", // 👈 Added
- scope: "openid"//"read:reports", // 👈 Added
+ audience: "https://testwithoutscopes", // 👈 Added
+ //scope: "read:reports", // 👈 Added
 });
 
   // handle user navigation
