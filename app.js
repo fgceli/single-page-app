@@ -11,7 +11,7 @@ window.auth0Client = await createAuth0Client({
  client_id,
  redirect_uri,
  cacheLocation: "localstorage",
- //audience: "https://expenses-api", // 👈 Added
+  //audience: "https://expenses-api", // 👈 Added
  scope: "read:reports", // 👈 Added
 });
 
